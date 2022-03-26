@@ -1,8 +1,4 @@
 $(document).ready(function() {
-
-
-
-
 	/*====================== js for sticky and mobile menu ====================== */
 	var min_height = $(window).height() - ($(".custom-header").height() + $(".custom-footer").height());
 	$(".main_page").css('min-height', min_height + 'px');
@@ -32,6 +28,41 @@ $(document).ready(function() {
 	})
 
 
+	 // This button will increment the value
+	 $('.qtyplus').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If is not undefined
+        if (!isNaN(currentVal)) {
+            // Increment
+            $('input[name='+fieldName+']').val(currentVal + 1);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(0);
+        }
+    });
+    // This button will decrement the value till 0
+    $(".qtyminus").click(function(e) {
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If it isn't undefined or its greater than 0
+        if (!isNaN(currentVal) && currentVal > 0) {
+            // Decrement one
+            $('input[name='+fieldName+']').val(currentVal - 1);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(0);
+        }
+    });
+
 	/*====================== js for scrollTop ====================== */
 	var btn = $('#button');
 
@@ -50,6 +81,15 @@ $(document).ready(function() {
 		}, '500');
 	});
 	/*====================== js for scrollTop ====================== */
+
+
+	$(document).on('click','.add-btn', function(){
+		$('.add_item').addClass('show-quntity');
+	});
+
+	$(document).on('click','.add_item', function(){
+		$('.food_listing').addClass('cart');
+	});
 
 
 /*====================== filter-slider start ====================== */
