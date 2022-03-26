@@ -21,9 +21,16 @@ body {
   }
   .text_black, .module_heading h2, .price {
     color: #222;
-}{
-    color:#2b2421;
-  }
+}
+.checkout_heading .r_name{
+  line-height:0;
+}
+.text-light{
+  color:#686b78 !important;
+}
+.extra-smll{
+  font-size: 12px;
+}
 .container{
 	max-width: 1180px;
 }  
@@ -703,8 +710,103 @@ li{
 }
 .cart_block_heading h6 {
   font-size: 32px;
+  font-weight: 600;  
+  line-height: 32px;
+}
+.cart_block_heading{
+padding-bottom: 18px;
+}
+.btn_checkout, .btn_checkout:hover {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  background-color: #60b246;
+  color: #fff;
+  font-weight: 800;
+  margin-top: 28px;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.cart_footer h5 {
   font-weight: 600;
-  padding-bottom: 18px;
+  line-height: 0;
+}
+  .food_name h4 {
+    font-size: 17px;
+  }
+.checkout_heading img {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: contain;
+  margin-right: 20px;
+  object-position: top;
+  position: relative;
+  top: 5px;
+}
+.r_name h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.bill p {
+  font-size: 13px;
+  line-height: 17px;
+}
+.bill h6 {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #282c3f;
+}
+.tax {
+  padding: 15px 0px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pay {
+  padding: 15px 0px;
+  border-top: 2px solid #f69126;
+}
+.checkout-content {
+  background: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 8%);
+}
+.food_listing .cart_block {
+  transform: translateX(1000%);
+  -moz-transition: all .10s;
+    -o-transition: all .10s;
+    -webkit-transition: all .10s;
+    transition: all .10s;
+    position: absolute;
+    top: 0;
+    transform: translateX(1000%);
+    width:100%;
+}
+.food_listing.cart .cart_block {
+  transform: unset;
+  -moz-transition: all .10s;
+    -o-transition: all .10s;
+    -webkit-transition: all .10s;
+    transition: all .10s;
+}
+.food_listing .cart_empaty h6 {
+  color: #7e808c;
+  letter-spacing: -.3px;
+  font-size: 32px;
+}
+.food_listing .cart_empaty p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.food_listing.cart  .cart_empaty{
+  opacity: 0;
+  position: relative;
+  z-index: -1;
 }
 /*=================================== media query css ===================================*/
 
